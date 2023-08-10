@@ -168,7 +168,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 64px auto 0px;
-    background-color: #fff;
+    background-color: #0c0c0c;
     border-radius: 16px;
     width: 363px;
   }
@@ -178,7 +178,7 @@
     padding: 24px;
     border-radius: 0 0 16px 16px;
     margin-top: 32px;
-    background: #acacac;
+    background: #2b2b2b;
     backdrop-filter: blur(323px);
     width: 100%;
   }
