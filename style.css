@@ -7,7 +7,7 @@
 
 /* /////////////mQ////////////// */
 
-@media (min-width: 1408px) {
+@media (min-width: 1480px) {
   .menu {
     display: none;
   }
@@ -130,7 +130,7 @@
 
   /* //////////////////////////////////////////////////////////////// */
 }
-@media (max-width: 1407px) {
+@media (max-width: 1479px) {
   .nav-links {
     display: none;
   }
