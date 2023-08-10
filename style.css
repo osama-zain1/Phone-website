@@ -213,6 +213,7 @@
 .nav {
   width: 80%;
   position: sticky;
+  top: 0;
   margin: 20px auto;
   z-index: 99;
   display: flex;
