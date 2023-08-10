@@ -19,3 +19,20 @@ downBtn.onclick = function () {
   rotateValue = rotateSum;
 };
 //////////////////////
+
+let menuLinks = document.querySelector(".menuLinks");
+let menuB = document.querySelector("#menuB");
+
+menuB.onclick = function () {
+  if (menuLinks.style.display === "flex") {
+    menuLinks.style.display = "none";
+  } else {
+    menuLinks.style.display = "flex";
+  }
+};
+
+document.addEventListener("click", function (e) {
+  if ((e.target != menuB) & (e.target != menuLinks)) {
+    menuLinks.style.display = "none";
+  }
+});

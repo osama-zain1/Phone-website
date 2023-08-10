@@ -2,32 +2,224 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-.main {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(to right, rgb(91, 35, 245), #26b7c2);
-}
+/* /////////////mQ////////////// */
 
+@media (min-width: 1408px) {
+  .menu {
+    display: none;
+  }
+  .logo2 {
+    display: none;
+  }
+
+  .mobile {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  /* ///////// */
+  .logo {
+    flex-basis: 20%;
+  }
+  .img1 {
+    width: 72px;
+  }
+
+  /* ///////// */
+
+  .featuresHidden {
+    display: none;
+  }
+
+  #circle {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: 1s;
+  }
+
+  .feature img {
+    width: 70px;
+  }
+  .feature {
+    position: absolute;
+    display: flex;
+    color: #fff;
+  }
+  .feature div {
+    margin-left: 30px;
+  }
+
+  .feature div p {
+    margin-top: 8px;
+  }
+  .one {
+    top: 450px;
+    right: 0;
+  }
+  .two {
+    top: 100px;
+    left: 350px;
+    transform: rotate(-90deg);
+  }
+  .three {
+    bottom: 450px;
+    left: 0px;
+    transform: rotate(180deg);
+  }
+  .four {
+    bottom: 150px;
+    right: 380px;
+    transform: rotate(90deg);
+  }
+
+  .controls {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .controls h3 {
+    margin: 15px 0;
+    color: #fff;
+  }
+  #up {
+    width: 24px;
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+
+  #down {
+    width: 24px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    width: 0;
+    top: 43px;
+    left: 0;
+    position: absolute;
+    height: 77px;
+    border-top: 500px solid #fff;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #fff;
+    border-left: 500px solid #fff;
+  }
+  .info {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  /* //////////////////////////////////////////////////////////////// */
+}
+@media (max-width: 1407px) {
+  .nav-links {
+    display: none;
+  }
+  .controls {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .logo2 {
+    flex-basis: 20%;
+  }
+  .img2 {
+    width: 72px;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  #circle {
+    display: none;
+  }
+  .mobile {
+    width: 250px;
+    margin-top: 32px;
+  }
+  .mobile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 64px auto 0px;
+    background-color: #fff;
+    border-radius: 16px;
+    width: 363px;
+  }
+  .featuresHidden {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 0 0 16px 16px;
+    margin-top: 32px;
+    background: #acacac;
+    backdrop-filter: blur(323px);
+    width: 100%;
+  }
+
+  .features {
+    display: flex;
+    color: #fff;
+    margin-top: 24px;
+  }
+  .features div {
+    margin-left: 32px;
+  }
+  .features img {
+    width: 60px;
+  }
+  .features div h1 {
+    margin-bottom: 8px;
+  }
+  .info {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* //////edited/////  */
 .nav {
   width: 80%;
   position: sticky;
   margin: 20px auto;
-  z-index: 1;
+  z-index: 99;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  z-index: 90;
 }
-
-.logo {
-  flex-basis: 20%;
-}
-.logo img {
-  width: 72px;
-}
-
 .nav-links {
   flex: 1;
   text-align: right;
@@ -42,97 +234,60 @@
   text-decoration: none;
 }
 
-.info {
-  width: 1000px;
-  height: 1000px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-#circle {
-  width: 1000px;
-  height: 1000px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  transform: rotate(0deg);
-  transition: 1s;
-}
-.feature img {
-  width: 70px;
-}
-.feature {
-  position: absolute;
-  display: flex;
-  color: #fff;
-}
-.feature div {
-  margin-left: 30px;
+/* ////////e end////// */
+/* ////////////////////////////// */
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: scroll;
+  background: #232323;
 }
 
-.feature div p {
+#menuB {
+  width: 58px;
+  cursor: pointer;
+}
+.menuLinks {
+  position: absolute;
+  transform: translate(-32px);
+  background-color: #fff;
+  border-radius: 8px;
   margin-top: 8px;
+  z-index: 90;
+  display: none;
 }
-.one {
-  top: 450px;
-  right: 0;
+.menuLinks ul {
+  display: flex;
+  flex-direction: column;
 }
-.two {
-  top: 100px;
-  left: 350px;
-  transform: rotate(-90deg);
-}
-.three {
-  bottom: 450px;
-  left: 0px;
-  transform: rotate(180deg);
-}
-.four {
-  bottom: 150px;
-  right: 380px;
-  transform: rotate(90deg);
-}
-.mobile {
-  width: 350px;
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.controls {
-  position: absolute;
-  right: 15%;
-  top: 50%;
-  transform: translateY(-50%);
+.lii {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  list-style: none;
+  cursor: pointer;
 }
 
-.controls h3 {
-  margin: 15px 0;
+.lii a {
+  text-decoration: none;
+  color: #232323;
+  font-weight: 600;
+  cursor: pointer;
+  /* border-radius: 8px; */
+  width: 100%;
+  padding: 20px;
+}
+.menuLinks ul li:last-child a {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.menuLinks ul li:first-child a {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.lii a:hover {
   color: #fff;
-}
-#up {
-  width: 24px;
-  cursor: pointer;
-  transform: rotate(180deg);
-}
-
-#down {
-  width: 24px;
-  cursor: pointer;
-}
-
-.overlay {
-  width: 0;
-  height: 0;
-  border-top: 500px solid #fff;
-  border-right: 500px solid transparent;
-  border-bottom: 500px solid #fff;
-  border-left: 500px solid #fff;
-  left: 0;
-  top: 0;
+  background-color: #585858 !important;
 }
